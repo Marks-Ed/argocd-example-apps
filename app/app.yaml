@@ -43,8 +43,8 @@ spec:
         maxDuration: 3m # the maximum amount of time allowed for the backoff strategy
 
   # Ignore differences at the specified json pointers
-  # ignoreDifferences:
-  # - group: apps
-  #   kind: Deployment
-  #   jsonPointers:
-  #   - /spec/replicas
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/replicas
